@@ -1,0 +1,16 @@
+body{
+    background: linear-gradient(35deg,#CCFFFF,#FFCCCC);
+    
+}
+main{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+h1{
+    text-align: center;
+    color: rgb(241, 18, 130);
+}
