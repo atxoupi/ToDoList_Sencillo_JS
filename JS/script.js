@@ -18,12 +18,6 @@ enviar.addEventListener ('click', (evento) => {
         tarea.focus();
         console.log(listado);
         mostrar_tabla(listado);
-        console.log(removeElement);
-        for(tipo in removeElement){
-            console.log("que devuelve el span...");
-            console.log(tipo);
-        }
-        console.log(reset);
     }
 });
 reset.addEventListener('click',(e)=>{
@@ -45,12 +39,11 @@ reset.addEventListener('click',(e)=>{
 // });
 
 function mostrar_tabla(array){
-    let contenido="";
-    for(let i=0; i<array.length; i++){
-        // contenido+="<li>"+array[i]+"<span id='del' >Eliminar</span></li>";
-        contenido+=`<li>${array[i]}<button id="del" >DEL</button> </li>`;
-        // onClick=${() => borrar(array[i])}
-    }
+    let contenido;
+    let res=array.map((task)=>{
+        return `<li>${task}</li>`;
+    });
+    contenido=res.join(" ");
     lista.innerHTML=contenido;
 };
 
