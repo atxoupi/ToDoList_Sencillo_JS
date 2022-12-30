@@ -48,5 +48,6 @@ function mostrar_tabla(array){
 taskList.addEventListener("click", function(event){
     const element = event.target.firstElementChild; 
     element.className==="fa-regular fa-circle"?element.className="fa-regular fa-circle-xmark":element.className="fa-regular fa-circle";
-    console.log(element);
+    element.parentNode.className === "item"? element.parentNode.className += " checked": element.parentNode.className = "item";
+    console.log(element.parentNode);
 });
