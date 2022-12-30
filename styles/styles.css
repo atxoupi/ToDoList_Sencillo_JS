@@ -14,3 +14,13 @@ h1{
     text-align: center;
     color: rgb(241, 18, 130);
 }
+.item{
+    width:380px;
+    height: 30px;
+    min-height: 30px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
