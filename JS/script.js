@@ -3,7 +3,11 @@ const reset = document.getElementById("reset");
 const tarea=document.getElementById("tarea");
 const lista=document.getElementById("lista");
 const taskList=document.getElementById("taskList");
-const removeElement=document.getElementById("papelera");
+const dateElement=document.getElementById("fecha");
+
+const options = {weekday : "long", month:"long", day:"numeric"};
+const today = new Date();
+dateElement.innerHTML = today.toLocaleDateString("es", options);
 
 let data = localStorage.getItem("TODO");
 let listado;
@@ -37,18 +41,14 @@ reset.addEventListener('click',(e)=>{
 });
 
 function mostrar_tabla(array){
-    let contenido;
-    let res=array.map((task)=>{
+    taskList.innerHTML=array.map((task)=>{
         return `<li class="item"> <i class="fa-regular fa-circle"></i> ${task}<span class="trash"><i id="papelera" class="fa-solid fa-trash"></i></span> </li>`;
-    });
-    contenido=res.join(" ");
-    taskList.innerHTML=contenido;
+    }).join(" ");
 };
 
 taskList.addEventListener("click", function(event){
     const probando= event.target;
     if(probando.getAttribute("id")==="papelera"){
-        let deleteItem=probando.parentNode;
         taskList.removeChild(deleteItem.parentNode);
         let eliminado=probando.parentNode.parentNode.textContent;
         listado=listado.filter((element)=> element!==eliminado.trim());

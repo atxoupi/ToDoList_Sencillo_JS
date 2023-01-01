@@ -24,9 +24,11 @@ h1{
     list-style: none;
     padding: 0;
     margin: 0;
+    align-items: center;
 }
 .checked{
     text-decoration: line-through;
+    filter: blur(0.8px);
 }
 i{
     margin: 4px;
@@ -36,4 +38,9 @@ i{
     width: 20%;
     color: red;
     margin-left: auto;
+}
+#fecha{
+    color: blue;
+    margin: 4px;
+    padding: 4px;
 }
