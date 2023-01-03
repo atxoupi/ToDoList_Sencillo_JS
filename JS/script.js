@@ -47,8 +47,9 @@ function mostrar_tabla(array){
 };
 
 taskList.addEventListener("click", function(event){
-    const probando= event.target;
+    const probando= event.target; 
     if(probando.getAttribute("id")==="papelera"){
+        const deleteItem=probando.parentNode;
         taskList.removeChild(deleteItem.parentNode);
         let eliminado=probando.parentNode.parentNode.textContent;
         listado=listado.filter((element)=> element!==eliminado.trim());

@@ -40,7 +40,14 @@ i{
     margin-left: auto;
 }
 #fecha{
-    color: blue;
+    color: rgb(219, 75, 8);
     margin: 4px;
-    padding: 4px;
+    border: 2px;
+}
+#dataContent{
+    width: 75%;
+    display: flex;
+    justify-content: end;
+    border-bottom: 2px solid rgba(243, 9, 9, 0.2);
+    margin-bottom: 10px;    
 }
