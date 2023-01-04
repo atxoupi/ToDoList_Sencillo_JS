@@ -55,6 +55,7 @@ taskList.addEventListener("click", function(event){
         listado=listado.filter((element)=> element!==eliminado.trim());
         localStorage.clear();
         localStorage.setItem("TODO", JSON.stringify(listado));
+        // hola
     }else{
         const element = event.target.firstElementChild; 
         element.className==="fa-regular fa-circle"?element.className="fa-regular fa-circle-xmark":element.className="fa-regular fa-circle";
