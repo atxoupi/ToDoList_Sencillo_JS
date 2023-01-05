@@ -25,6 +25,7 @@ h1{
     padding: 0;
     margin: 0;
     align-items: center;
+    color: #eb4e4e;
 }
 .checked{
     text-decoration: line-through;
@@ -49,5 +50,13 @@ i{
     display: flex;
     justify-content: end;
     border-bottom: 2px solid rgba(243, 9, 9, 0.2);
-    margin-bottom: 10px;    
+    margin-bottom: 10px;   
+}
+
+#tarea{
+    border-radius: 4px;
+    border-color: #eb7676;
+    color: #eb7676;
+    background-color: rgb(250, 245, 245);
+    outline-color: #eb7676;
 }

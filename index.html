@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script type="text/javascript" src="JS/script.js" defer></script>
     <script src="https://kit.fontawesome.com/cf62efad8c.js" crossorigin="anonymous"></script>
 </head>
@@ -15,9 +16,10 @@
         <div id="dataContent"><h2 id="fecha"></h2></div>
         
         <div id="caja">
-            <input type="text" id="tarea">
-            <button id="enviar">Enviar</button>
-            <button id="reset">Reset</button>
+            <input type="text" id="tarea" placeholder="Introduce aquí tu Tarea">
+            
+            <button id="enviar" class="btn btn-outline-danger pulse">Enviar</button>
+            <button id="reset" class="btn btn-outline-danger close">Reset</button>
             <div id="lista">
                 <ul id="taskList"></ul>
             </div>

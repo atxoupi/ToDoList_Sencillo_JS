@@ -20,7 +20,7 @@ if(data){
 
 
 enviar.addEventListener ('click', (evento) => {
-    let nuevo=tarea.value;
+    let nuevo=tarea.value[0].toUpperCase()+tarea.value.substr(1);
     if(nuevo===""){
         alert("debes introducir un valor");
     }
@@ -28,11 +28,11 @@ enviar.addEventListener ('click', (evento) => {
         listado.push(nuevo);
         tarea.value="";
         tarea.focus();
-        console.log(listado);
         localStorage.setItem("TODO", JSON.stringify(listado));
         mostrar_tabla(listado);
     }
 });
+
 reset.addEventListener('click',(e)=>{
     listado=[];
     localStorage.clear();
@@ -55,7 +55,6 @@ taskList.addEventListener("click", function(event){
         listado=listado.filter((element)=> element!==eliminado.trim());
         localStorage.clear();
         localStorage.setItem("TODO", JSON.stringify(listado));
-        // hola
     }else{
         const element = event.target.firstElementChild; 
         element.className==="fa-regular fa-circle"?element.className="fa-regular fa-circle-xmark":element.className="fa-regular fa-circle";
@@ -63,4 +62,3 @@ taskList.addEventListener("click", function(event){
     }
     
 });
-
